@@ -11,8 +11,20 @@ import logout from "../assets/icons/logout.png";
 import eyeHide from "../assets/icons/eye-hide.png";
 import eye from "../assets/icons/eye.png";
 import play from "../assets/icons/play.png";
+import composer from "../assets/icons/composer.png";
+import profile2 from "../assets/icons/profile2.png";
+import men from "../assets/icons/men.png";
+import kid from "../assets/icons/kid.png";
+import points from "../assets/icons/points.png";
+import discover from "../assets/icons/discover.png";
 
 export default {
+  kid,
+  points,
+  men,
+  discover,
+  profile2,
+  composer,
   play,
   bookmark,
   home,
