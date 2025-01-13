@@ -15,7 +15,7 @@ export default function App(){
         {/* <ScrollView contentContainerStyle={{height : '100%'}}> */}
             <View className = "">
                 <Image 
-                source={images.logo}
+                source={images.logo} 
                 />
                 <View className ="relatative mt-5">
                 <Text className = "text-3xl text-white font-bold text-center">
