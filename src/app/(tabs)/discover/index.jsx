@@ -26,49 +26,57 @@ const renderItem = (pack) => {
         </TouchableOpacity>
     );
 };
+export const items = [
+    {
+        id: 1,
+        title: "Guitar Camp",
+        subtitle: "7 Songs • Instrumental",
+        image: images.mcamp,
+        isActive: true,
+        songs: [
+            {
+                title: 'test',
+                desc: 'test2'
+            }
+        ],
+        isBottomSheetActive:true,
+    },
+    {
+        id: 2,
+        title: "Chill-hop",
+        subtitle: "7 Songs • Instrumental",
+        image: images.mmoon,
+    },
+    {
+        id: 3,
+        title: "Pack name",
+        subtitle: "4 Hours • Category name",
+        image: images.mforest,
+        isActive: true
+
+    },
+    {
+        id: 4,
+        title: "Pack name",
+        subtitle: "4 Hours • Category name",
+        image: images.mway,
+    },
+    {
+        id: 5,
+        title: "Pack name",
+        subtitle: "4 Hours • Category name",
+        image: images.mwhale,
+    },
+    {
+        id: 6,
+        title: "Pack name",
+        subtitle: "4 Hours • Category name",
+        image: images.mforest,
+    },
+];
 
 const Discover = () => {
-    const items = [
-        {
-            id: 1,
-            title: "Guitar Camp",
-            subtitle: "7 Songs • Instrumental",
-            image: images.mcamp,
-            isActive: true
-        },
-        {
-            id: 2,
-            title: "Chill-hop",
-            subtitle: "7 Songs • Instrumental",
-            image: images.mmoon,
-        },
-        {
-            id: 3,
-            title: "Pack name",
-            subtitle: "4 Hours • Category name",
-            image: images.mforest,
-            isActive: true
 
-        },
-        {
-            id: 4,
-            title: "Pack name",
-            subtitle: "4 Hours • Category name",
-            image: images.mway,
-        },
-        {
-            id: 5,
-            title: "Pack name",
-            subtitle: "4 Hours • Category name",
-            image: images.mwhale,
-        },
-        {
-            id: 6,
-            title: "Pack name",
-            subtitle: "4 Hours • Category name",
-            image: images.mforest,
-        },
-    ];
     return (
         <SafeAreaView className="bg-primary w-full h-full p-4">
             <View className="flex-1 flex ">
