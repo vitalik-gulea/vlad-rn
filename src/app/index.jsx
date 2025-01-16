@@ -11,7 +11,7 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       router.push("/begining");
-    }, 2000);
+    }, 10);
   }, []);
   return (
     <SafeAreaView className="bg-primary h-full  ">

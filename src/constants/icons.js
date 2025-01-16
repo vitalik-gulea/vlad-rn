@@ -17,8 +17,13 @@ import men from "../assets/icons/men.png";
 import kid from "../assets/icons/kid.png";
 import points from "../assets/icons/points.png";
 import discover from "../assets/icons/discover.png";
-
+import play2 from "../assets/icons/play2.png";
+import star from "../assets/icons/star.png";
+import back from "../assets/icons/back.png";
 export default {
+  back,
+  play2,
+  star,
   kid,
   points,
   men,

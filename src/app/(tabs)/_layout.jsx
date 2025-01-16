@@ -17,10 +17,11 @@ const TabsLayout = () => {
       screenOptions={{
         tabBarStyle: {
           backgroundColor: "#21283F",
-          borderTopWidth: 1,
           borderTopColor: "#21283F",
           height: 69,
           borderTopWidth: 1,
+          zIndex:1,
+          
         },
       }}
     >
@@ -28,7 +29,7 @@ const TabsLayout = () => {
         name="discover"
         options={{
           title: "Discover",
-          headerShown: false,
+          headerShown:false,
           tabBarIcon: ({ color, focused }) => (
             <TabIcon
               icon={icons.discover}
@@ -48,7 +49,7 @@ const TabsLayout = () => {
             <TabIcon
               icon={icons.composer}
               color={color}
-              name="Bookmark"
+              name="Composer"
               focused={focused}
             />
           ),

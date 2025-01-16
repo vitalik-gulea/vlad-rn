@@ -16,7 +16,8 @@ import mwhale from"../assets/images/mwhale.png";
 import mmoon from"../assets/images/mmoon.png";
 import mway from"../assets/images/mway.png";
 import mcamp from"../assets/images/mcamp.png";
+import gcsmal from"../assets/images/gcsmal.svg";
 
 
 
-export default { mcamp,mforest,mmoon,mway,mwhale,profile, thumbnail, cards, path, logo, logoSmall, empty ,pag1,pag2,pag3,exclusive,relax,story};
+export default {gcsmal, mcamp,mforest,mmoon,mway,mwhale,profile, thumbnail, cards, path, logo, logoSmall, empty ,pag1,pag2,pag3,exclusive,relax,story};
