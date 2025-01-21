@@ -1,4 +1,12 @@
-import { View, Text, Pressable, TouchableOpacity, Image } from "react-native";
+import {
+  View,
+  Text,
+  Pressable,
+  TouchableOpacity,
+  Image,
+  FlatList,
+  ScrollView,
+} from "react-native";
 import React, { useEffect, useRef, useMemo } from "react";
 import { Redirect, router } from "expo-router";
 import {
@@ -6,7 +14,7 @@ import {
   BottomSheetView,
   BottomSheet,
 } from "@gorhom/bottom-sheet";
-import { icons,images } from "../constants";
+import { icons, images } from "../constants";
 import Grayline from "./grayline";
 
 const CustomBottomSheet = ({ isOpen, setCloseModal }) => {
@@ -20,7 +28,10 @@ const CustomBottomSheet = ({ isOpen, setCloseModal }) => {
       bottomSheetModalRef.current.dismiss();
     }
   }, [isOpen]);
+
+  
   return (
+    
     <BottomSheetModal
       ref={bottomSheetModalRef}
       onDismiss={setCloseModal}
@@ -28,6 +39,10 @@ const CustomBottomSheet = ({ isOpen, setCloseModal }) => {
       index={1}
       backgroundStyle={{ borderRadius: 50, backgroundColor: "#141927" }}
     >
+       <ScrollView
+       contentContainerStyle={{ paddingBottom: 200 }}
+        showsVerticalScrollIndicator={false}
+      >
       <BottomSheetView>
         <Text className="text-white font-bold text-3xl left-4 ">
           Guitar Camp{" "}
@@ -43,20 +58,14 @@ const CustomBottomSheet = ({ isOpen, setCloseModal }) => {
         }}
       ></View>
       <View className="flex flex-row gap gap-10 top-5">
-        <TouchableOpacity
-          className="bg-blue-500 rounded-full w-[164px] flex flex-row gap gap-2 left-3 h-[38px] items-center justify-center  "
-         
-        >
+        <TouchableOpacity className="bg-blue-500 rounded-full w-[164px] flex flex-row gap gap-2 left-3 h-[38px] items-center justify-center  ">
           <Image
             source={icons.play}
             className="w-[25px] h-[25px] object-cover rounded-2xl"
           />
           <Text className="text-white text-lg">Play</Text>
         </TouchableOpacity>
-        <TouchableOpacity
-          className="bg-secondary rounded-full w-[164px] left-10 h-[38px] items-center justify-center flex flex-row gap gap-2 "
-          
-        >
+        <TouchableOpacity className="bg-secondary rounded-full w-[164px] left-10 h-[38px] items-center justify-center flex flex-row gap gap-2 ">
           <Image
             source={icons.star}
             className="w-[15px] h-[15px] object-cover rounded-2xl"
@@ -74,7 +83,7 @@ const CustomBottomSheet = ({ isOpen, setCloseModal }) => {
           marginVertical: 46,
         }}
       ></View>
-      <View className="gap gap-3">
+      <View className="gap gap-3 left-4">
         <View>
           <Text className="text-2xl text-white">About this pack</Text>
         </View>
@@ -96,51 +105,90 @@ const CustomBottomSheet = ({ isOpen, setCloseModal }) => {
 
         <View className="gap gap-3 left-4 top-6">
           <View className="flex flex-row gap gap-4">
-            <Text className="text-gray-400">01</Text>
+            <Text className="text-gray-400 top-2">01</Text>
             <TouchableOpacity>
               <Image
                 source={icons.play}
                 className="w-[32px] h-[32px] object-cover rounded-2xl"
               />
             </TouchableOpacity>
-            <Text className="text-gray-400">The Guitars </Text>
+            <Text className="text-gray-400 top-2">The Guitars </Text>
           </View>
           <Grayline />
           <View className="flex flex-row gap gap-4">
-            <Text className="text-gray-400">02</Text>
+            <Text className="text-gray-400 top-2">02</Text>
             <TouchableOpacity>
               <Image
                 source={icons.play}
                 className="w-[32px] h-[32px] object-cover rounded-2xl"
               />
             </TouchableOpacity>
-            <Text className="text-gray-400">Lost Without You</Text>
+            <Text className="text-gray-400 top-2">Lost Without You</Text>
           </View>
           <Grayline />
           <View className="flex flex-row gap gap-4">
-            <Text className="text-gray-400">03</Text>
+            <Text className="text-gray-400 top-2">03</Text>
             <TouchableOpacity>
               <Image
                 source={icons.play}
                 className="w-[32px] h-[32px] object-cover rounded-2xl"
               />
             </TouchableOpacity>
-            <Text className="text-gray-400">City Lights</Text>
+            <Text className="text-gray-400 top-2">City Lights</Text>
           </View>
           <Grayline />
           <View className="flex flex-row gap gap-4">
-            <Text className="text-gray-400">04</Text>
+            <Text className="text-gray-400 top-2">04</Text>
             <TouchableOpacity>
               <Image
                 source={icons.play}
                 className="w-[32px] h-[32px] object-cover rounded-2xl"
               />
             </TouchableOpacity>
-            <Text className="text-gray-400">Romantic</Text>
+            <Text className="text-gray-400 top-2">Romantic</Text>
           </View>
         </View>
       </View>
+      <View className =" top-10 left-6 " >
+        <Text className= " text-xl text-white" >
+          Featured On 
+        </Text>
+      </View>
+      <View className=" flex flex-row gap-10 left-6 top-14">
+        <TouchableOpacity 
+        className = " gap gap-2"
+       >
+          <Image
+            source={images.mwhale}
+            className="w-[164px] h-[164px] object-cover rounded-2xl"
+          />
+          <Image
+            source={icons.play}
+            className="w-[32px] h-[32px] absolute rounded-2xl left-3 top-3"
+          />
+          <Text className= "text-white text-xl">Mwhale Song </Text>
+          <Text className= "text-gray-500 text-xs">7 songs * Instrumental  </Text>
+        </TouchableOpacity>
+        <TouchableOpacity 
+        className = " gap gap-2"
+        >
+          <Image
+            source={images.mmoon}
+            className="w-[164px] h-[164px] object-cover rounded-2xl"
+          />
+          <Image
+            source={icons.play}
+            className="w-[32px] h-[32px] absolute rounded-2xl left-3 top-3 "
+          />
+          <Text className= "text-white text-xl">Moon Songs </Text>
+          <Text className= "text-gray-500 text-xs">7 songs * Instrumental  </Text>
+        </TouchableOpacity>
+      </View>
+     
+
+      </ScrollView>
     </BottomSheetModal>
+   
   );
 };
 

@@ -25,13 +25,17 @@ const renderItem = (pack) => {
         source={item.image}
         className="w-[164px] h-[164px] object-cover rounded-2xl"
       />
+       <Image
+        source={item.icons}
+        className="w-[32px] h-[32px] absolute rounded-2xl left-2 top-3"
+      />
       <View className="p-2">
         <Text className="text-white font-bold text-lg">{item.title}</Text>
         <Text className="text-gray-400 text-sm">{item.subtitle}</Text>
       </View>
     </TouchableOpacity>
   );
-};
+;}
 export const items = [
   {
     id: 1,
@@ -47,12 +51,14 @@ export const items = [
     ],
     isBottomSheetActive: true,
     imageType: "guitar",
+    icons : icons.play
   },
   {
     id: 2,
     title: "Chill-hop",
     subtitle: "7 Songs • Instrumental",
     image: images.mmoon,
+    icons : icons.play
   },
   {
     id: 3,
@@ -60,36 +66,41 @@ export const items = [
     subtitle: "4 Hours • Category name",
     image: images.mforest,
     isActive: true,
+    icons : icons.play
   },
   {
     id: 4,
     title: "Pack name",
     subtitle: "4 Hours • Category name",
     image: images.mway,
+    icons : icons.play
   },
   {
     id: 5,
     title: "Pack name",
     subtitle: "4 Hours • Category name",
     image: images.mwhale,
+    icons : icons.play
   },
   {
     id: 6,
     title: "Pack name",
     subtitle: "4 Hours • Category name",
     image: images.mforest,
+    icons : icons.play
   },
   {
     id: 6,
     title: "Pack name",
     subtitle: "4 Hours • Category name",
     image: images.mforest,
+    icons : icons.play
   },
 ];
 
 const Discover = () => {
   return (
-    <SafeAreaView className="bg-primary  px-3 py-0 ">
+    <SafeAreaView className="bg-primary px-3 py-0  ">
       <View className="py-5">
         <Text className="text-3xl font-bold text-white text-start  ">
           Discover

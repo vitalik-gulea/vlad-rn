@@ -26,7 +26,7 @@ const Ditails = () => {
   const setCloseModal = () => {
     setIsOpenModal(false);
   };
-  console.log(items[id - 1].image);
+
   const backClick = () => {
     setIsOpenModal(false);
     router.push("/discover");
@@ -45,9 +45,7 @@ const Ditails = () => {
         </View>
       )}
       <TouchableOpacity onPress={openModalClick}>
-        <AllImages iconName={items[id - 1].imageType}  />
-         
-      
+        <AllImages iconName={items[id - 1].imageType} />
       </TouchableOpacity>
       {items[id - 1].isBottomSheetActive && (
         <CustomBottomSheet isOpen={isOpenModal} setCloseModal={setCloseModal} />
