@@ -13,9 +13,17 @@
         {
           "origin": "https://n"
         }
+        
+      ],
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow $(PRODUCT_NAME) to use your location."
+        }
       ]
     ],
     "name": "vlad",
     "slug": "vlad"
   }
+  
 }
